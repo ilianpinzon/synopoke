@@ -34,7 +34,7 @@ Notes
 
 2. If you updated DSM, you may need to do steps 3-5 again.
 
-Prequisites for compiling this solution
+Prerequisites for compiling this solution
 ---------------------------------------
 1. Visual Studio 2013
 2. NodeJs Tools (http://nodejstools.codeplex.com/)
