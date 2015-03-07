@@ -24,7 +24,7 @@ Usage
 4. Copy ``deploy/S99synopoke.sh`` to the DiskStation's ``/usr/syno/etc/rc.d/`` directory
 
 5. SSH into the DiskStation and run ``chmod 755 /usr/syno/etc/rc.d/S99synopoke.sh``,
-   then ``/usr/syno/etc/rc.d/S99mediamon.sh start &``
+   then ``/usr/syno/etc/rc.d/S99synopoke.sh start &``
 
 Notes
 -----
