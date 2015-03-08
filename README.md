@@ -16,10 +16,10 @@ Usage
 
 3. Edit ``deploy/S99synopoke.sh`` and replace the following parameters "host port apiKey restartAfter" 
 
-   host - IP address or host name of the Sonarr server
-   port - port of the Sonarr server
-   apiKey - your Sonarr API key
-   restartAfter - how often you would want to check for new media in Sonarr (in milliseconds)
+   * host - IP address or host name of the Sonarr server
+   * port - port of the Sonarr server
+   * apiKey - your Sonarr API key
+   * restartAfter - how often you would want to check for new media in Sonarr (in milliseconds)
 
 4. Copy ``deploy/S99synopoke.sh`` to the DiskStation's ``/usr/syno/etc/rc.d/`` directory
 
