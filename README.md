@@ -29,8 +29,8 @@ Usage
 Notes
 -----
 
-1. The first time synopoke is run, it will only look for media within the current day. If you haven't indexed
-   your media files yet, use Synology's re-indexing feature. Synopoke is not meant as a replacement for that.
+1. The first time synopoke is run, it will look for all media that was imported by Sonarr. This could take a while if
+   the list is long. Succeeding runs will only look for the latest media.
 
 2. If you updated DSM, you may need to do steps 3-5 again.
 
