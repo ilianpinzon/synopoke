@@ -12,9 +12,12 @@ Usage
 
 1. Install NodeJs from the DiskStation package manager.
 
-2. Copy ``deploy/synopoke.js`` to the DiskStation's ``/root/`` directory
+2. SSH into DiskStation and run ``npm install forever -g``. This is required to run the script as a daemon.
 
-3. Edit ``deploy/S99synopoke.sh`` and replace the following parameters "host port apiKey restartAfter" 
+3. Copy ``deploy/synopoke.js`` to the DiskStation's ``/root/`` directory
+
+4. Edit ``deploy/S99synopoke.sh`` and find the following line ``/root/synopoke.js host port apiKey restartAfter &``. Replace 
+   the parameters ``host port apiKey restartAfter`` with the following:
 
    * host - IP address or host name of the Sonarr server
    * port - port of the Sonarr server
@@ -23,8 +26,8 @@ Usage
 
 4. Copy ``deploy/S99synopoke.sh`` to the DiskStation's ``/usr/syno/etc/rc.d/`` directory
 
-5. SSH into the DiskStation and run ``chmod 755 /usr/syno/etc/rc.d/S99synopoke.sh``,
-   then ``/usr/syno/etc/rc.d/S99synopoke.sh start &``
+5. SSH into DiskStation and run ``chmod 755 /usr/syno/etc/rc.d/S99synopoke.sh``,
+   then ``/usr/syno/etc/rc.d/S99synopoke.sh start &``. 
 
 Notes
 -----

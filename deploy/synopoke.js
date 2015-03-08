@@ -2,7 +2,7 @@
 var fs = require('fs');
 var http = require('http');
 
-var LatestEpisodePath = '/root/latest_episode';
+var LatestEpisodePath = 'synopoke.lst';
 
 var host = process.argv[2];
 var port = process.argv[3];
@@ -112,10 +112,9 @@ function start(timeout) {
 }
 
 process.on('uncaughtException', function (err) {
-    console.log('Ooops, that didn\'t work:');
-    console.log(err);
-    console.log('Restarting in ' + restartAfter + 'ms...');
-    start(restartAfter);
+    console.error('Ooops, that didn\'t work:');
+    console.error(err);
+    process.exit(1);
 });
 
 start(0);

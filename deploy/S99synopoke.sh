@@ -4,14 +4,15 @@
 case "$1" in
   start|"")
     #start the monitoring daemon
-    /usr/bin/node /root/synopoke.js host port apiKey restartAfter
+    forever start --minUptime 60000 --spinSleepTime 10000 -m 100  \
+      --workingDir /root/ -l /root/forever.log -o /root/synopoke.log -e /root/synopoke.err -a \
+      /root/synopoke.js host port apiKey restartAfter &
     ;;
   restart|reload|force-reload)
-    echo "Error: argument '$1' not supported" >&2
-    exit 3
+    forever restart /root/synopoke.js &
     ;;
   stop)
-    kill `cat /var/run/synopoke.pid`
+    forever stop /root/synopoke.js &
     ;;
   *)
     echo "Usage: S99synopoke.sh [start|stop]" >&2
